@@ -1,0 +1,10 @@
+Local clay engine adapter
+Source: original tyctc128 topography_game engine, retained from terrain-explorer.
+Embed /clay/index.html?terrain=plain (also hills, mountain, tableland, basin).
+All loaded assets/config local. No camera, SSO, quiz API or Google fonts are activated by this adapter.
+The original pointer/touch sculpture, clay pots, tool controls, orbit, undo, contours and real height-grid assessment are preserved.
+Parent must validate event.origin === location.origin and event.source === iframe.contentWindow.
+Messages emitted: terrain-ready {terrain}; terrain-assessment {terrain,passed,score,stars,hints,attempts}; terrain-pass {terrain,score,stars,attempts} on every successful check (parent/server deduplicates stamps; permits retry after network failure); terrain-error {message}.
+Parent sends {type:'set-terrain',terrain:'plain'} to iframe.contentWindow with location.origin; this resets progress for that active terrain and emits terrain-ready. Optional {type:'terrain-check'} invokes the same real assessment.
+A pass only follows original board.check(target).passed; no timeout/button shortcut grants completion. Parent should persist its own earned stamps.
+The original scoring uses numerical altitude thresholds as a simplified model (plain below 100m, hills 100–1000m, mountain above 1000m), plus topographic shape checks. These are model rules, not universal geographic definitions.

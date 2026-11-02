@@ -1,0 +1,132 @@
+[
+  {
+    "id": "plain",
+    "target": "plain",
+    "title": "平原",
+    "tip": "用「壓平」按住凸起的地方，再用「抹平」來回抹。",
+    "start": {
+      "type": "bumps",
+      "count": 5,
+      "height": 220,
+      "radius": 0.075,
+      "seed": 3
+    },
+    "budget": 0.025,
+    "conserveVolume": false,
+    "reveal": {
+      "name": "嘉南平原",
+      "fact": "嘉南平原是臺灣面積最大的平原，地勢低平，很適合種稻米。"
+    },
+    "intro": "地勢低平、視野開闊，把凹凸不平的黏土壓成一片寬廣的平原吧！",
+    "targets": [
+      "地面寬闊平坦",
+      "起伏很小"
+    ]
+  },
+  {
+    "id": "tableland",
+    "target": "tableland",
+    "title": "台地",
+    "tip": "用「抹平」和「壓平」整理頂端，小心不要把邊邊抹鈍了。",
+    "start": {
+      "type": "plateau",
+      "height": 420,
+      "radius": 0.27,
+      "seed": 5
+    },
+    "budget": 0.025,
+    "conserveVolume": false,
+    "reveal": {
+      "name": "桃園台地",
+      "fact": "桃園台地頂部平坦、邊緣較陡，上面有許多埤塘，是先民挖來儲水灌溉用的。"
+    },
+    "intro": "讓土地像一張桌子：上面平坦、位置較高，邊緣有明顯的坡。",
+    "targets": [
+      "頂部平坦、位置較高",
+      "邊緣有明顯陡坡"
+    ]
+  },
+  {
+    "id": "hills",
+    "target": "hills",
+    "title": "丘陵",
+    "tip": "從黏土罐拖幾團黏土到土盤上，再用「抹平」讓山坡變柔和。不要超過紅線喔！",
+    "start": {
+      "type": "flat"
+    },
+    "budget": 0.04,
+    "conserveVolume": false,
+    "reveal": {
+      "name": "竹苗丘陵",
+      "fact": "新竹、苗栗一帶有許多丘陵，高低起伏和緩，常種植茶樹。"
+    },
+    "intro": "捏出一片高低起伏的丘陵，讓小山丘溫柔地連在一起。",
+    "targets": [
+      "高度 100–1000 公尺",
+      "好幾個小山頭、山坡和緩"
+    ]
+  },
+  {
+    "id": "mountain",
+    "target": "mountain",
+    "title": "山地",
+    "tip": "多放幾團黏土疊在一起，再用「拉高」往上拉，看山有沒有超過紅色的 1000 公尺線。",
+    "start": {
+      "type": "flat"
+    },
+    "budget": 0.06,
+    "conserveVolume": false,
+    "reveal": {
+      "name": "中央山脈",
+      "fact": "山地佔臺灣面積一半以上，中央山脈縱貫南北，被稱為臺灣的屋脊。"
+    },
+    "intro": "把黏土堆高，捏出高聳、陡峭的山。",
+    "targets": [
+      "高度超過 1000 公尺",
+      "坡度陡峭、起伏明顯"
+    ]
+  },
+  {
+    "id": "basin",
+    "target": "basin",
+    "title": "盆地",
+    "tip": "用「壓平」按住中間往下壓，四周保持高高的圍起來。",
+    "start": {
+      "type": "mound",
+      "height": 800,
+      "radius": 0.3,
+      "power": 2
+    },
+    "budget": 0.03,
+    "conserveVolume": false,
+    "reveal": {
+      "name": "臺北盆地",
+      "fact": "臺北盆地四周被山地和台地圍繞，中間低平，是臺灣人口最多的地方之一。"
+    },
+    "intro": "捏出四周高、中間低的地形，像一個大臉盆。",
+    "targets": [
+      "四周較高、中間較低",
+      "中央形成低平的區域"
+    ]
+  },
+  {
+    "id": "profile",
+    "target": "profile",
+    "title": "臺灣剖面",
+    "tip": "左邊保持平平的，中間做幾個小山頭，右邊堆一座高山。",
+    "start": {
+      "type": "flat"
+    },
+    "budget": 0.08,
+    "conserveVolume": false,
+    "reveal": {
+      "name": "臺灣的地形",
+      "fact": "臺灣西部多平原，往東漸漸變成丘陵、台地，再到中央的高山，地勢西低東高。"
+    },
+    "intro": "從西（左）到東（右），捏出臺灣由低到高的變化。",
+    "targets": [
+      "西邊平原、中間丘陵",
+      "東邊有超過 1000 公尺的高山"
+    ]
+  }
+]
