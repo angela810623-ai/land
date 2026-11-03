@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#285641">
+  <meta name="description" content="五人一組，捏出五大地形、答題收集彈珠，再一起迎接落球決賽。">
+  <title>地形彈珠賽｜五人展場挑戰</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#f7f6ee;color:#285641;font-family:"Microsoft JhengHei",sans-serif}
+    body{display:flex;flex-direction:column}iframe{display:block;width:100%;flex:1;min-height:0;border:0;background:#f7f6ee}
+    .service-bar{flex:none;min-height:29px;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:6px 18px;border-top:1px solid #dfe2d5;font-size:10px;color:#7c8972;background:#f7f6ee}
+    a{color:#446e50;text-underline-offset:3px}.loading{position:fixed;inset:0 0 29px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#f7f6ee;text-align:center;padding:24px;z-index:2}
+    .loading h1{font-size:26px;letter-spacing:2px;margin:0}.loading p{font-size:13px;line-height:1.9;color:#87957b;margin:0}.loading a{font-size:12px}
+    .spinner{width:26px;height:26px;border:2px solid #dce3d2;border-top-color:#6d905e;border-radius:50%;animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:600px){.service-bar{font-size:9px;padding:6px 10px;gap:10px}.service-bar span{max-width:70%}}
+    @media(prefers-reduced-motion:reduce){.spinner{animation:none}}
+  </style>
+</head>
+<body>
+  <div class="loading" id="loading" role="status"><span class="spinner"></span><h1>地形彈珠賽</h1><p>正在開啟捏地形、集彈珠的冒險。</p><a class="direct" href="https://terrain-marble-festival.workspace-503122.chatgpt.site/" target="_blank" rel="noopener">如果無法載入，直接開啟遊戲 ↗</a></div>
+  <iframe id="game" title="地形彈珠賽完整遊戲" allow="fullscreen; clipboard-write" allowfullscreen></iframe>
+  <div class="service-bar"><span>GitHub Pages 遊戲入口 · 五人連線由遊戲伺服器提供</span><a class="direct" href="https://terrain-marble-festival.workspace-503122.chatgpt.site/" target="_blank" rel="noopener">直接開啟遊戲 ↗</a></div>
+  <noscript>請啟用 JavaScript，或使用下方「直接開啟遊戲」連結。</noscript>
+  <script>
+    const target=new URL('https://terrain-marble-festival.workspace-503122.chatgpt.site/');
+    const room=new URL(location.href).searchParams.get('room');
+    if(room&&/^\d{6}$/.test(room))target.searchParams.set('room',room);
+    document.querySelectorAll('.direct').forEach(a=>a.href=target.href);
+    const frame=document.getElementById('game');
+    frame.addEventListener('load',()=>document.getElementById('loading').remove(),{once:true});
+    frame.src=target.href;
+  </script>
+</body>
+</html>

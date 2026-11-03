@@ -1,0 +1,15 @@
+地形彈珠賽 GitHub Pages 發布設定
+
+Repository：angela810623-ai/land
+可見度：Public（公開展場遊戲）
+分支：main
+Pages 來源：Deploy from a branch
+Pages 路徑：/docs
+
+docs/index.html 是完整遊戲的全畫面入口。既有五人連線、房號與成績資料庫沿用公開遊戲服務：
+https://terrain-marble-festival.workspace-503122.chatgpt.site/
+
+這不是離線版；遊戲仍需要穩定網路與既有後端。GitHub Pages 本身不會執行 Cloudflare Worker 或 D1 資料庫。
+docs 可直接發布，不需要安裝 Node.js 或執行建置。完整遊戲原始碼同時保存在 app、lib、public、db 等資料夾。
+
+發布時上傳完整原始碼，並以上方設定啟用 Pages。請以 GitHub 回傳的部署網址為準。

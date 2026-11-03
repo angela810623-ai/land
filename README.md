@@ -1,3 +1,37 @@
+# 地形彈珠賽｜五人展場挑戰
+
+五位玩家一起捏出臺灣五大地形、答題收集彈珠，再看落球決賽揭曉前三名。
+
+## 現場操作
+
+1. 工作人員建立場次，主螢幕顯示房號。
+2. 五位玩家各用一臺裝置，輸入房號與暱稱。
+3. 一起練習操作，再完成五種地形的捏塑挑戰。
+4. 六題同步答題；完成捏塑得 5 顆，答對每題再得 2 顆。
+5. 主持人開始落球決賽，30 秒後自動揭曉名次；同分並列。
+
+可先使用「先試捏看看」與「先看完整演示」。完整流程見 [展場操作說明](展場操作說明.txt)。
+
+## GitHub Pages
+
+Pages 請設定為 `main` 分支的 `/docs` 資料夾，不需要建置。
+
+`docs/index.html` 提供全畫面的遊戲入口。五人連線、房號、同步作答與資料庫由原有 [遊戲服務](https://terrain-marble-festival.workspace-503122.chatgpt.site/) 提供，因此仍需穩定網路。Pages 本身不會執行伺服器程式。
+
+## 原始碼
+
+- `app/`：遊戲介面與場次 API。
+- `lib/`：關卡、題庫、計分與可重播的彈珠模擬。
+- `public/clay/`：立體黏土工作臺。
+- `db/`、`drizzle/`：場次資料庫結構。
+- `docs/`：GitHub Pages 入口。
+
+捏塑引擎原作：[黏土捏地形](https://tyctc128.github.io/topography_game/)。地形模型與海拔門檻為簡化教學設定。未將原教材 PDF 放入公開程式庫。
+
+---
+
+## 開發環境與後端部署參考
+
 # vinext-starter
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
